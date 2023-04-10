@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/newFrame"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scrollbarSize="0dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/newTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/opensans_bold"
+                android:text="Nuova prenotazione"
+                android:textColor="?attr/counterTextColor"
+                android:textSize="35sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/priceTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="30dp"
+                android:textColor="?attr/counterTextColor"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="Prezzo ( la commissione verrà detratta )"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newTitle" />
+
+            <EditText
+                android:id="@+id/priceForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="@color/blue_theme"
+                android:fontFamily="@font/opensans_semibold"
+                android:hint="100€"
+                android:inputType="number"
+                android:textColor="?attr/counterTextColor"
+                android:textColorHint="?attr/counterTextColor"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/priceTitle" />
+
+            <TextView
+                android:id="@+id/namesTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="?attr/counterTextColor"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="Nome degli ospiti"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/priceForm" />
+
+            <EditText
+                android:id="@+id/namesForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="@color/blue_theme"
+                android:fontFamily="@font/opensans_semibold"
+                android:hint="Szvetlana Kocimelova"
+                android:inputType="textMultiLine"
+                android:textColor="?attr/counterTextColor"
+                android:textColorHint="?attr/counterTextColor"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/namesTitle" />
+
+            <TextView
+                android:id="@+id/arrivalTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="Data d'arrivo"
+                android:textColor="?attr/counterTextColor"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/namesForm" />
+
+            <EditText
+                android:id="@+id/arrivalForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="@color/blue_theme"
+                android:fontFamily="@font/opensans_semibold"
+                android:hint="1/1/2022"
+                android:inputType="date"
+                android:textColor="?attr/counterTextColor"
+                android:textColorHint="?attr/counterTextColor"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/arrivalTitle" />
+
+            <TextView
+                android:id="@+id/partenzaTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="Data di partenza"
+                android:textColor="?attr/counterTextColor"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/arrivalForm" />
+
+            <EditText
+                android:id="@+id/partenzaForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="@color/blue_theme"
+                android:fontFamily="@font/opensans_semibold"
+                android:hint="2/1/2022"
+                android:inputType="date"
+                android:textColor="?attr/counterTextColor"
+                android:textColorHint="?attr/counterTextColor"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/partenzaTitle" />
+
+            <TextView
+                android:id="@+id/numTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="Numero di ospiti"
+                android:textColor="?attr/counterTextColor"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/partenzaForm" />
+
+            <Spinner
+                android:id="@+id/numForm"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/numTitle" />
+
+            <TextView
+                android:id="@+id/bookTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="Mettoda"
+                android:textColor="?attr/counterTextColor"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.975"
+                app:layout_constraintStart_toEndOf="@+id/numTitle"
+                app:layout_constraintTop_toBottomOf="@+id/partenzaForm" />
+
+            <Spinner
+                android:id="@+id/bookForm"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bookTitle" />
+            <TextView
+                android:id="@+id/phoneTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="Numero di cellulare"
+                android:textColor="?attr/counterTextColor"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/numForm" />
+
+            <EditText
+                android:id="@+id/phoneForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="@color/blue_theme"
+                android:fontFamily="@font/opensans_semibold"
+                android:hint="39360263486"
+                android:inputType="phone"
+                android:textColor="?attr/counterTextColor"
+                android:textColorHint="?attr/counterTextColor"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phoneTitle" />
+
+            <TextView
+                android:id="@+id/houseTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="Casa in affitto"
+                android:textColor="?attr/counterTextColor"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phoneForm" />
+
+            <LinearLayout
+                android:id="@+id/houseForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="140dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/houseTitle">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/casaRosa1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/new_button_house"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:paddingHorizontal="20dp"
+                    android:text="Casa Rosa 1"
+                    android:textColor="?attr/counterTextColor"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/casaRosa2"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/new_button_house"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:paddingHorizontal="20dp"
+                    android:text="Casa Rosa 2"
+                    android:textColor="?attr/counterTextColor"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="60dp"
+        android:text="aggiungi"
+        android:id="@+id/addBtn"
+        android:textColor="@color/white"
+        android:fontFamily="@font/opensans_bold"
+        android:textSize="20sp"
+        android:background="@drawable/new_button"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/calendarFrame"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CalendarFragment"
+    android:background="@drawable/big">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/calendarScroll"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:paddingBottom="40dp">
+
+            <TextView
+                android:id="@+id/titleCalendar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/opensans_bold"
+                android:text="Calendario"
+                android:textColor="?attr/counterTextColor"
+                android:textSize="35sp" />
+
+            <ImageView
+                android:id="@+id/addBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_add"
+                app:tint="?attr/counterTextColor" />
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="90dp"
+                android:background="@drawable/calendar_back"
+                android:dateTextAppearance="@style/CalenderViewDateCustomText"
+                android:theme="@style/CalenderViewCustom"
+                android:weekDayTextAppearance="@style/CalenderViewWeekCustomText" />
+
+            <TextView
+                android:id="@+id/taskTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/calendarView"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/opensans_bold"
+                android:text="Arrivo e partenze"
+                android:textColor="?attr/counterTextColor"
+                android:textSize="20sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/noTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/taskTitle"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/chart_back"
+                android:visibility="gone"
+                android:paddingHorizontal="30dp"
+                android:paddingVertical="10dp">
+
+                <ImageView
+                    android:id="@+id/clearCheck"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_clear"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/blue_theme" />
+
+                <TextView
+                    android:id="@+id/clearTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/opensans_bold"
+                    android:text="Nessun compito per oggi"
+                    android:textColor="?attr/counterTextColor"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clearCheck" />
+
+                <TextView
+                    android:id="@+id/clearDes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Nessuna attività o arrivo per oggi\nTi avviseremo quando qualcosa cambia"
+                    android:textAlignment="center"
+                    android:textColor="?attr/counterTextColor"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clearTitle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/taskTitle"
+                android:layout_marginHorizontal="20dp"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/card_view"
+                    android:padding="30dp">
+
+
+                    <ImageView
+                        android:id="@+id/arrivaLogo1"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/ic_arrival"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/cardviewTitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="Arriva Casa Rosa 1"
+                        android:textColor="?attr/counterTextColor"
+                        android:layout_marginLeft="65dp"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:id="@+id/deleteBtn1"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/ic_delete"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:visibility="gone"/>
+
+                    <RelativeLayout
+                        android:id="@+id/expandableLayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardviewTitle1"
+                        tools:layout_editor_absoluteX="34dp">
+
+                        <TextView
+                            android:id="@+id/cardview1Guest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:lineSpacingExtra="5dp"
+                            android:text="Samir Omar \nMaria de la Rosa"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/cardview1Price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardview1Guest"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:lineSpacingExtra="5dp"
+                            android:text="130$"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/cardview1Dates"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardview1Price"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:text="1/1/2022 - 2/1/2022"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/cardview1Phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardview1Dates"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:text="0736611684"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/upBtn1"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_below="@+id/cardview1Phone"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:foregroundGravity="center"
+                            android:src="@drawable/ic_up"
+                            app:tint="?attr/counterTextColor" />
+
+                        <TextView
+                            android:id="@+id/cardview1id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="cinestie"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/card_view"
+                    android:padding="30dp">
+
+                    <ImageView
+                        android:id="@+id/arrivaLogo2"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="4dp"
+                        android:src="@drawable/ic_arrival"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/cardviewTitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="Arriva Casa Rosa 2"
+                        android:textColor="?attr/counterTextColor"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="65dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/cardview2NumOfGuests"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="2 Ospiti"
+                        android:textColor="?attr/counterTextColor"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginLeft="65dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardviewTitle2"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <ImageView
+                        android:id="@+id/deleteBtn2"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/ic_delete"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:visibility="gone"/>
+
+
+                    <RelativeLayout
+                        android:id="@+id/expandableLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/cardview2NumOfGuests"
+                        tools:layout_editor_absoluteX="34dp">
+
+                        <TextView
+                            android:id="@+id/cardview2Guest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:lineSpacingExtra="5dp"
+                            android:text="Samir Omar"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/cardview2Price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardview2Guest"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:lineSpacingExtra="5dp"
+                            android:text="130$"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/cardview2Dates"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardview2Price"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:text="1/1/2022 - 2/1/2022"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/cardview2Phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardview2Dates"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:text="0736611684"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/upBtn2"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_below="@+id/cardview2Phone"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:foregroundGravity="center"
+                            android:src="@drawable/ic_up"
+app:tint="?attr/counterTextColor"  />
+
+                        <TextView
+                            android:id="@+id/cardview2id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="cinestie"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardview3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/card_view"
+                    android:padding="30dp">
+
+                    <ImageView
+                        android:id="@+id/arrivaLogo3"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="4dp"
+                        android:src="@drawable/ic_partenza"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/cardviewTitle3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="Parte Casa Rosa 1"
+                        android:textColor="?attr/counterTextColor"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="65dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/cardview3NumOfGuests"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="2 Ospiti"
+                        android:textColor="?attr/counterTextColor"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginLeft="65dp"
+                        app:layout_constraintTop_toBottomOf="@+id/cardviewTitle3"
+                        app:layout_constraintVertical_bias="0.0" />
+
+
+                    <ImageView
+                        android:id="@+id/deleteBtn3"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/ic_delete"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:visibility="gone"/>
+
+                    <RelativeLayout
+                        android:id="@+id/expandableLayout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/cardview3NumOfGuests"
+                        tools:layout_editor_absoluteX="34dp">
+
+                        <TextView
+                            android:id="@+id/cardview3Guest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:lineSpacingExtra="5dp"
+                            android:text="Samir Omar"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/cardview3Price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardview3Guest"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:lineSpacingExtra="5dp"
+                            android:text="130$"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/cardview3Dates"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardview3Price"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:text="1/1/2022 - 2/1/2022"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/cardview3Phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardview3Dates"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:text="0736611684"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/upBtn3"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_below="@+id/cardview3Phone"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:foregroundGravity="center"
+                            android:src="@drawable/ic_up"
+app:tint="?attr/counterTextColor"  />
+
+                        <TextView
+                            android:id="@+id/cardview3id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="cinestie"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardview4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/card_view"
+                    android:padding="30dp">
+
+                    <ImageView
+                        android:id="@+id/arrivaLogo4"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="4dp"
+                        android:src="@drawable/ic_partenza"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/cardviewTitle4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="Parte Casa Rosa 1"
+                        android:textColor="?attr/counterTextColor"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="65dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/cardview4NumOfGuests"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="2 Ospiti"
+                        android:layout_marginLeft="65dp"
+                        android:textColor="?attr/counterTextColor"
+                        android:textSize="18sp"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardviewTitle4"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <ImageView
+                        android:id="@+id/deleteBtn4"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/ic_delete"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:visibility="gone"/>
+
+                    <RelativeLayout
+                        android:id="@+id/expandableLayout4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/cardview4NumOfGuests"
+                        tools:layout_editor_absoluteX="34dp">
+
+                        <TextView
+                            android:id="@+id/cardview4Guest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:lineSpacingExtra="5dp"
+                            android:text="Samir Omar"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/cardview4Price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardview4Guest"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:lineSpacingExtra="5dp"
+                            android:text="130$"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/cardview4Dates"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardview4Price"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:text="1/1/2022 - 2/1/2022"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/cardview4Phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardview4Dates"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:text="0736611684"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/upBtn4"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_below="@+id/cardview4Phone"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:foregroundGravity="center"
+                            android:src="@drawable/ic_up"
+app:tint="?attr/counterTextColor"  />
+
+                        <TextView
+                            android:id="@+id/cardview4id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="cinestie"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardview5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/card_view"
+                    android:padding="30dp">
+
+                    <ImageView
+                        android:id="@+id/arrivaLogo5"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="4dp"
+                        android:src="@drawable/ic_ocupat"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/cardviewTitle5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="Ocupato Casa Rosa 1"
+                        android:layout_marginLeft="65dp"
+                        android:textColor="?attr/counterTextColor"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/cardview5NumOfGuests"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="2 Ospiti"
+                        android:textColor="?attr/counterTextColor"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="65dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/arrivaLogo5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardviewTitle5"
+                        app:layout_constraintVertical_bias="0.0" />
+
+
+
+                    <ImageView
+                        android:id="@+id/deleteBtn5"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/ic_delete"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
+                        android:visibility="gone"/>
+
+                    <RelativeLayout
+                        android:id="@+id/expandableLayout5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/cardview5NumOfGuests"
+                        tools:layout_editor_absoluteX="34dp">
+
+                        <TextView
+                            android:id="@+id/cardview5Guest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:text="Samir Omar"
+                            android:lineSpacingExtra="5dp"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/cardview5Price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:lineSpacingExtra="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/cardview5Guest"
+                            android:text="130$"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/cardview5Dates"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardview5Price"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:text="1/1/2022 - 2/1/2022"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:id="@+id/cardview5Phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardview5Dates"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:text="0736611684"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/upBtn5"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_below="@+id/cardview5Phone"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:foregroundGravity="center"
+                            android:src="@drawable/ic_up"
+app:tint="?attr/counterTextColor"  />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="cinestie"
+                            android:visibility="gone"
+                            android:id="@+id/cardview5id"/>
+                    </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardview6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/card_view"
+                    android:padding="30dp">
+
+                    <ImageView
+                        android:id="@+id/arrivaLogo6"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="4dp"
+                        android:src="@drawable/ic_ocupat"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/cardviewTitle6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="Ocupato Casa Rosa 1"
+                        android:textColor="?attr/counterTextColor"
+                        android:layout_marginLeft="65dp"
+                        android:textSize="18sp"
+                        app:layout_constraintLeft_toRightOf="@+id/arrivaLogo6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/cardview6NumOfGuests"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="2 Ospiti"
+                        android:layout_marginLeft="65dp"
+                        android:textColor="?attr/counterTextColor"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/arrivaLogo6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardviewTitle6"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <ImageView
+                        android:id="@+id/deleteBtn6"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/ic_delete"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
+                        android:visibility="gone"/>
+
+                    <RelativeLayout
+                        android:id="@+id/expandableLayout6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/cardview6NumOfGuests"
+                        tools:layout_editor_absoluteX="34dp">
+
+                        <TextView
+                            android:id="@+id/cardview6Guest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:text="Samir Omar"
+                            android:lineSpacingExtra="5dp"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/cardview6Price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:lineSpacingExtra="5dp"
+                            android:layout_below="@+id/cardview6Guest"
+                            android:text="130$"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/cardview6Dates"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardview6Price"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:text="1/1/2022 - 2/1/2022"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:id="@+id/cardview6Phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardview6Dates"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:text="0736611684"
+                            android:textColor="?attr/counterTextColor"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/upBtn6"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_below="@+id/cardview6Phone"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:foregroundGravity="center"
+                            android:src="@drawable/ic_up"
+app:tint="?attr/counterTextColor"  />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="cinestie"
+                            android:visibility="gone"
+                            android:id="@+id/cardview6id"/>
+                    </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

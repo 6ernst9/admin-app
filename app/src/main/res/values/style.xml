@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CalenderViewCustom" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/blue_theme</item>
+        <item name="colorPrimary">@color/grey_blue</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name ="android:weekSeparatorLineColor">@color/grey_blue</item>
+    </style>
+
+    <style name="MaterialAlertDialog_rounded" parent="@style/ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/DialogCorners</item>
+    </style>
+    <style name="DialogCorners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+    <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">?attr/counterTextColor</item>
+        <item name="android:weekNumberColor">?attr/counterTextColor</item>
+
+        <item name="android:textSize">18dp</item>
+        <item name="daySelectedStyle">@color/white</item>
+    </style>
+
+    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">?attr/counterTextColor</item>
+    </style>
+</resources>

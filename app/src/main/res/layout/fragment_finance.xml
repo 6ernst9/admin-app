@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FinanceFragment"
+    android:id="@+id/financeFrame"
+    android:background="@drawable/big">
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/scrollView"
+       android:scrollbarSize="0dp"
+       android:layout_marginBottom="0dp">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_marginTop="30dp"
+           android:paddingBottom="40dp">
+
+           <TextView
+               android:id="@+id/financeTitle"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginHorizontal="20dp"
+               android:layout_marginTop="30dp"
+               android:fontFamily="@font/opensans_bold"
+               android:text="Finanza"
+               android:textColor="?attr/counterTextColor"
+               android:textSize="35sp" />
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/weekChartLayout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/monthlyProfit"
+               android:layout_marginHorizontal="20dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="20dp"
+               android:background="@drawable/chart_back"
+               android:padding="10dp">
+
+               <TextView
+                   android:id="@+id/textView3"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="?attr/counterTextColor"
+                   android:fontFamily="@font/opensans_semibold"
+                   android:text="Profitto della scorsa settimana"
+                   android:textSize="20sp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <com.github.mikephil.charting.charts.BarChart
+                   android:id="@+id/weekChart"
+                   android:layout_width="match_parent"
+                   app:layout_constraintTop_toBottomOf="@+id/textView3"
+                   android:layout_height="250dp"
+                   android:layout_marginTop="10dp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent" />
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/financeWidget"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/methodChart"
+               android:layout_marginHorizontal="20dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:background="@drawable/chart_back"
+               android:padding="10dp">
+
+               <ImageView
+                   android:id="@+id/check1"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="30dp"
+                   android:src="@drawable/ic_check"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/sixMonthTitle" />
+
+               <ImageView
+                   android:id="@+id/check2"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="30dp"
+                   android:src="@drawable/ic_check"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/check1" />
+
+               <ImageView
+                   android:id="@+id/check3"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="30dp"
+                   android:src="@drawable/ic_check"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/check2" />
+
+               <ImageView
+                   android:id="@+id/check4"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="30dp"
+                   android:src="@drawable/ic_check"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/check3" />
+
+               <ImageView
+                   android:id="@+id/check5"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="30dp"
+                   android:src="@drawable/ic_check"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/check4" />
+
+               <ImageView
+                   android:id="@+id/check6"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="30dp"
+                   android:src="@drawable/ic_check"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/check5" />
+
+               <TextView
+                   android:id="@+id/sixMonthTitle"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   
+                   android:fontFamily="@font/opensans_semibold"
+                   android:text="Ultimi 6 mesi di profitto"
+                   android:textColor="?attr/counterTextColor"
+                   android:textSize="24sp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <TextView
+                   android:id="@+id/lastMonth1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="33dp"
+                   android:fontFamily="@font/opensans_semibold"
+                   android:text="August"
+                   android:textColor="?attr/counterTextColor"
+                   android:textSize="18sp"
+                   app:layout_constraintLeft_toRightOf="@+id/check1"
+                   app:layout_constraintTop_toBottomOf="@+id/sixMonthTitle" />
+
+               <TextView
+                   android:id="@+id/lastMonth2"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="33dp"
+                   android:fontFamily="@font/opensans_semibold"
+                   android:text="July"
+                   android:textColor="?attr/counterTextColor"
+                   android:textSize="18sp"
+                   app:layout_constraintLeft_toRightOf="@+id/check2"
+                   app:layout_constraintTop_toBottomOf="@+id/check1" />
+
+               <TextView
+                   android:id="@+id/lastMonth3"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="33dp"
+                   android:fontFamily="@font/opensans_semibold"
+                   android:text="June"
+                   android:textColor="?attr/counterTextColor"
+                   android:textSize="18sp"
+                   app:layout_constraintLeft_toRightOf="@+id/check3"
+                   app:layout_constraintTop_toBottomOf="@+id/check2" />
+
+               <TextView
+                   android:id="@+id/lastMonth4"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="33dp"
+                   android:fontFamily="@font/opensans_semibold"
+                   android:text="May"
+                   android:textColor="?attr/counterTextColor"
+                   android:textSize="18sp"
+                   app:layout_constraintLeft_toRightOf="@+id/check4"
+                   app:layout_constraintTop_toBottomOf="@+id/check3" />
+
+               <TextView
+                   android:id="@+id/lastMonth5"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="33dp"
+                   android:fontFamily="@font/opensans_semibold"
+                   android:text="April"
+                   android:textColor="?attr/counterTextColor"
+                   android:textSize="18sp"
+                   app:layout_constraintLeft_toRightOf="@id/check5"
+                   app:layout_constraintTop_toBottomOf="@+id/check4" />
+
+               <TextView
+                   android:id="@+id/lastMonth6"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="33dp"
+                   android:fontFamily="@font/opensans_semibold"
+                   android:text="March"
+                   android:textColor="?attr/counterTextColor"
+                   android:textSize="18sp"
+                   app:layout_constraintLeft_toRightOf="@id/check6"
+                   app:layout_constraintTop_toBottomOf="@+id/check5" />
+
+               <TextView
+                   android:id="@+id/lastMonthProfit1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="29dp"
+                   android:layout_marginRight="10dp"
+                   android:fontFamily="@font/opensans_semibold"
+                   android:text="+4200€"
+                   android:textColor="?attr/counterTextColor"
+                   android:textSize="24sp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/sixMonthTitle" />
+
+               <TextView
+                   android:id="@+id/lastMonthProfit2"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="29dp"
+                   android:layout_marginRight="10dp"
+                   android:fontFamily="@font/opensans_semibold"
+                   android:text="+4120€"
+                   android:textColor="?attr/counterTextColor"
+                   android:textSize="24sp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/check1" />
+
+               <TextView
+                   android:id="@+id/lastMonthProfit3"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="29dp"
+                   android:layout_marginRight="10dp"
+                   android:fontFamily="@font/opensans_semibold"
+                   android:text="+4060€"
+                   android:textColor="?attr/counterTextColor"
+                   android:textSize="24sp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/check2" />
+
+               <TextView
+                   android:id="@+id/lastMonthProfit4"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="29dp"
+                   android:layout_marginRight="10dp"
+                   android:fontFamily="@font/opensans_semibold"
+                   android:text="+3840€"
+                   android:textColor="?attr/counterTextColor"
+                   android:textSize="24sp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/check3" />
+
+               <TextView
+                   android:id="@+id/lastMonthProfit5"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="29dp"
+                   android:layout_marginRight="10dp"
+                   android:fontFamily="@font/opensans_semibold"
+                   android:text="+3620€"
+                   android:textColor="?attr/counterTextColor"
+                   android:textSize="24sp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/check4" />
+
+               <TextView
+                   android:id="@+id/lastMonthProfit6"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="29dp"
+                   android:layout_marginRight="10dp"
+                   android:fontFamily="@font/opensans_semibold"
+                   android:text="+3500€"
+                   android:textColor="?attr/counterTextColor"
+                   android:textSize="24sp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/check5" />
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/lineChartLayout"
+               android:layout_width="match_parent"
+               android:layout_height="310dp"
+               android:layout_below="@+id/financeWidget"
+               android:layout_marginHorizontal="20dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:background="@drawable/chart_back"
+               android:padding="10dp">
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:id="@+id/constraintLayout"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginHorizontal="20dp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                   <ImageView
+                       android:id="@+id/prevMonth"
+                       android:layout_width="30dp"
+                       android:layout_height="30dp"
+                       android:src="@drawable/ic_back"
+                       app:tint="?attr/counterTextColor"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent" />
+
+                   <TextView
+                       android:id="@+id/lineChartMonth"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/opensans_semibold"
+                       android:text="Agosto 2022"
+                       android:textColor="?attr/counterTextColor"
+                       android:textSize="20sp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent" />
+
+                   <ImageView
+                       android:id="@+id/nextMonth"
+                       android:layout_width="30dp"
+                       app:tint="?attr/counterTextColor"
+                       android:layout_height="30dp"
+                       android:src="@drawable/ic_forward"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintTop_toTopOf="parent" />
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
+               <com.github.mikephil.charting.charts.LineChart
+                   android:id="@+id/lineChart"
+                   android:layout_width="match_parent"
+                   android:layout_height="250dp"
+                   android:layout_marginTop="10dp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/anualProfit"
+               android:layout_width="match_parent"
+               android:layout_height="100dp"
+               android:layout_below="@+id/lineChartLayout"
+               android:layout_marginHorizontal="20dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:background="@drawable/chart_back"
+               android:padding="10dp">
+
+               <TextView
+                   android:id="@+id/anualProfitTitle"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginHorizontal="10dp"
+                   android:textColor="?attr/counterTextColor"
+                   android:fontFamily="@font/opensans_semibold"
+                   android:text="Profitto annuale"
+                   android:textSize="20sp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginHorizontal="10dp"
+                   android:orientation="horizontal"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/anualProfitTitle">
+
+                   <ImageView
+                       android:id="@+id/prevYear"
+                       android:layout_width="30dp"
+                       android:layout_height="30dp"
+                       android:src="@drawable/ic_back"
+                       app:tint="?attr/counterTextColor"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent" />
+
+                   <ImageView
+                       android:id="@+id/nextYear"
+                       android:layout_width="30dp"
+                       android:layout_height="30dp"
+                       app:tint="?attr/counterTextColor"
+                       android:src="@drawable/ic_forward"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintStart_toEndOf="@id/prevYear"
+                       app:layout_constraintTop_toTopOf="parent" />
+
+                   <TextView
+                       android:id="@+id/anualProfitYear"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="10dp"
+                       android:fontFamily="@font/opensans_semibold"
+                       android:text="2022"
+                       android:textColor="?attr/counterTextColor"
+                       android:textSize="24sp"
+                       app:layout_constraintStart_toEndOf="@id/nextYear"
+                       app:layout_constraintTop_toTopOf="parent" />
+
+                   <TextView
+                       android:id="@+id/anualProfitNumber"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/opensans_semibold"
+                       android:text="+100000€"
+                       android:textAlignment="textEnd"
+                       android:textColor="?attr/counterTextColor"
+                       android:textSize="24sp"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintTop_toTopOf="parent" />
+
+               </androidx.constraintlayout.widget.ConstraintLayout>
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/monthlyProfit"
+               android:layout_width="match_parent"
+               android:layout_height="100dp"
+               android:layout_below="@+id/anualProfit"
+               android:layout_marginHorizontal="20dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:background="@drawable/chart_back"
+               android:padding="10dp">
+
+               <TextView
+                   android:id="@+id/monthlyProfitTitle"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginHorizontal="10dp"
+                   android:layout_marginStart="16dp"
+                   android:textColor="?attr/counterTextColor"
+                   android:fontFamily="@font/opensans_semibold"
+                   android:text="Profitto mensile"
+                   android:textSize="20sp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginHorizontal="10dp"
+                   android:orientation="horizontal"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/monthlyProfitTitle">
+
+                   <ImageView
+                       android:id="@+id/prevMonthProfit"
+                       android:layout_width="30dp"
+                       android:layout_height="30dp"
+                       android:src="@drawable/ic_back"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:tint="?attr/counterTextColor" />
+
+                   <ImageView
+                       android:id="@+id/nextMonthProfit"
+                       android:layout_width="30dp"
+                       android:layout_height="30dp"
+                       android:src="@drawable/ic_forward"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintStart_toEndOf="@id/prevMonthProfit"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:tint="?attr/counterTextColor" />
+
+                   <TextView
+                       android:id="@+id/monthlyProfitMonth"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="10dp"
+                       android:fontFamily="@font/opensans_semibold"
+                       android:text="Ago 2022"
+                       android:textColor="?attr/counterTextColor"
+                       android:textSize="24sp"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintStart_toEndOf="@id/nextMonthProfit"
+                       app:layout_constraintTop_toTopOf="parent" />
+
+                   <TextView
+                       android:id="@+id/monthlyProfitNumber"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/opensans_semibold"
+                       android:text="+3500€"
+                       android:textAlignment="textEnd"
+                       android:textColor="?attr/counterTextColor"
+                       android:textSize="24sp"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintTop_toTopOf="parent" />
+
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/methodChart"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/financeTitle"
+               android:layout_marginHorizontal="20dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:background="@drawable/chart_back"
+               android:padding="10dp">
+
+               <TextView
+                   android:id="@+id/pieChartTitle"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/opensans_semibold"
+                   android:text="Metodo di prenotazione"
+                   android:textColor="?attr/counterTextColor"
+                   android:textSize="20sp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <com.github.mikephil.charting.charts.PieChart
+                   android:id="@+id/pieChart"
+                   android:layout_width="250dp"
+                   android:layout_height="250dp"
+                   android:layout_marginTop="4dp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintHorizontal_bias="0.495"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/pieChartTitle" />
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginHorizontal="40dp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   android:layout_marginTop="10dp"
+                   app:layout_constraintTop_toBottomOf="@+id/pieChart">
+
+                   <ImageView
+                       android:id="@+id/bookingColor"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="10dp"
+                       android:src="@drawable/ic_piechart_value1"
+                       app:layout_constraintBottom_toTopOf="@+id/bnbColor"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent" />
+
+                   <ImageView
+                       android:id="@+id/bnbColor"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@drawable/ic_piechart_value2"
+                       app:layout_constraintBottom_toTopOf="@+id/directColor"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/bookingColor" />
+
+                   <ImageView
+                       android:id="@+id/directColor"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="10dp"
+                       android:src="@drawable/ic_piechart_value3"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/bnbColor" />
+
+                   <TextView
+                       android:id="@+id/bookingLegend"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="10dp"
+                       android:textColor="?attr/counterTextColor"
+                       android:fontFamily="@font/opensans_semibold"
+                       android:text="Booking"
+                       android:textSize="16sp"
+                       app:layout_constraintBottom_toTopOf="@+id/bnbColor"
+                       app:layout_constraintLeft_toRightOf="@+id/bookingColor"
+                       app:layout_constraintTop_toTopOf="parent" />
+
+                   <TextView
+                       android:id="@+id/bnbLegend"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/opensans_semibold"
+                       android:text="AirBNB"
+                       android:textSize="16sp"
+                       android:textColor="?attr/counterTextColor"
+                       app:layout_constraintBottom_toTopOf="@+id/textView4"
+                       app:layout_constraintLeft_toRightOf="@+id/bnbColor"
+                       app:layout_constraintTop_toBottomOf="@+id/bookingColor"
+                       app:layout_constraintVertical_bias="0.435" />
+
+                   <TextView
+                       android:id="@+id/textView4"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="10dp"
+                       android:textColor="?attr/counterTextColor"
+                       android:fontFamily="@font/opensans_semibold"
+                       android:text="Diretta"
+                       android:textSize="16sp"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintLeft_toRightOf="@+id/directColor"
+                       app:layout_constraintTop_toBottomOf="@+id/bnbColor" />
+
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+       </RelativeLayout>
+   </ScrollView>
+
+</FrameLayout>

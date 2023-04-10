@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/rerns/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_list_item_1.xml" value="0.19437652811735942" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/avd_done.xml" value="0.1625" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/calendar_back.xml" value="0.1505" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/card_view.xml" value="0.149" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/chart_back.xml" value="0.149" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/check_back.xml" value="0.1625" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/dialog_box.xml" value="0.1505" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/gradient_status.xml" value="0.1505" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/ic_add.xml" value="0.1505" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/ic_add2.xml" value="0.1505" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/ic_arrival.xml" value="0.149" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/ic_chart.xml" value="0.1505" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/ic_check.xml" value="0.1505" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/ic_clear.xml" value="0.1505" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/ic_delete.xml" value="0.1505" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/ic_edit.xml" value="0.1505" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/ic_home.xml" value="0.1505" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1655" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/ic_ocupat.xml" value="0.1505" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/ic_partenza.xml" value="0.149" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/ic_piechart_value.xml" value="0.1505" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/ic_piechart_value2.xml" value="0.1505" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/ic_piechart_value3.xml" value="0.1505" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/ic_user.xml" value="0.149" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/ic_user2.xml" value="0.1505" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/new_button.xml" value="0.149" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/new_button_house.xml" value="0.1505" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/drawable/new_button_selected.xml" value="0.1505" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/layout/activity_add_actvity.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/layout/activity_check.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/layout/activity_new_book.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/layout/activity_screen.xml" value="0.2" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/layout/delete_layout.xml" value="0.21068376068376068" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/layout/fragment_calendar.xml" value="0.264" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/layout/fragment_finance.xml" value="0.264" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/layout/fragment_home.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/menu/bottom_menu.xml" value="0.2162280701754386" />
+        <entry key="..\:/Users/rerns/Documents/cod/Finance/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1625" />
+        <entry key="..\:/Users/rerns/OneDrive/Documents/Finance/app/src/main/res/drawable/chart_back.xml" value="0.1475" />
+        <entry key="..\:/Users/rerns/OneDrive/Documents/Finance/app/src/main/res/drawable/custom_progressbar.xml" value="0.1475" />
+        <entry key="..\:/Users/rerns/OneDrive/Documents/Finance/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/rerns/OneDrive/Documents/Finance/app/src/main/res/layout/activity_screen.xml" value="0.43079584775086505" />
+        <entry key="..\:/Users/rerns/OneDrive/Documents/Finance/app/src/main/res/layout/fragment_finance.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/rerns/OneDrive/Documents/Finance/app/src/main/res/layout/fragment_home.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/rerns/OneDrive/Documents/Finance/app/src/main/res/menu/bottom_menu.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/rerns/OneDrive/Documents/android/Finance/app/src/main/res/drawable/chart_back.xml" value="0.1475" />
+        <entry key="..\:/Users/rerns/OneDrive/Documents/android/Finance/app/src/main/res/layout/activity_add_actvity.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/rerns/OneDrive/Documents/android/Finance/app/src/main/res/layout/activity_main.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/rerns/OneDrive/Documents/android/Finance/app/src/main/res/layout/activity_screen.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/rerns/OneDrive/Documents/android/Finance/app/src/main/res/layout/delete_layout.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/rerns/OneDrive/Documents/android/Finance/app/src/main/res/layout/fragment_calendar.xml" value="0.264" />
+        <entry key="..\:/Users/rerns/OneDrive/Documents/android/Finance/app/src/main/res/layout/fragment_finance.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/rerns/OneDrive/Documents/android/Finance/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
